@@ -66,6 +66,16 @@ Wireframe 2
 
 Implement a filter by name functionality on the first screen that automatically filters the results while typing, only showing the rows that satisfy the criteria entered by the user.
 
+
+## Delivery Steps: 
+
+1. Create a branch from `master` named `base` and push all the third-party code needed (Libraries, Frameworks, etc.).
+2. Create a branch from `base` named `code-test` and push your own code (Remember to update the Readme file providing any instructions on how to run the project if needed).
+4. Create a Pull Request from `code-test` to `base` for us to review.
+
+Thank you and good luck!
+
+
 ## Questions:
 
 A) Describe the strategy used to consume the API endpoints and the data management.
