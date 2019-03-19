@@ -2,11 +2,31 @@
 
 ## Instructions:
 
-Please clone the repository, complete the exercise, and submit a PR for us to review! If you have any questions, you can reach out directly here or leave comments on your pull request which we will respond to. Remember, all instructions for running the application (including installing relevant libraries, etc.) should be included in the README. Thank you and looking forward to seeing your great work!
+Please clone the repository, complete the exercise, and submit a PR for us to review! If you have any questions, you can reach out directly here or leave comments on your pull request which we will respond to. Remember, all instructions for running the application (including installing relevant libraries, etc.) should be included in the README. 
+
+
+## Delivery Steps: 
+
+1. Create a branch from `master` named `base` and push all the third-party code needed (Libraries, Frameworks, etc.).
+2. Create a branch from `base` named `code-test` and push your own code (Remember to update the Readme file providing any instructions on how to run the project if needed).
+3. Create a Pull Request from `code-test` to `base` for us to review.
+
+
+## Please answer the following questions once you finish codding:
+
+A) Describe the strategy used to consume the API endpoints and the data management.
+
+B) Explain which library was used for the routing and why. Would you use the same for a consumer facing app targeting thousands of users? Why?
+
+C) Have you used any strategy to optimize the performance of the list generated for the first feature?
+
+D) Would you like to add any further comments or observations?
+
 
 ## Overview:
 
 Implement a simple mobile cocktails catalogue (master / detail). The catalogue consists of a table view list of cocktails with their name, toppings and photo. Once the user taps on a specific row it will push a new screen with that drink’s details: Name, Photo, Ingredients and Preparation.
+
 
 ## Features:
 
@@ -67,21 +87,8 @@ Wireframe 2
 Implement a filter by name functionality on the first screen that automatically filters the results while typing, only showing the rows that satisfy the criteria entered by the user.
 
 
-## Delivery Steps: 
 
-1. Create a branch from `master` named `base` and push all the third-party code needed (Libraries, Frameworks, etc.).
-2. Create a branch from `base` named `code-test` and push your own code (Remember to update the Readme file providing any instructions on how to run the project if needed).
-4. Create a Pull Request from `code-test` to `base` for us to review.
-
-Thank you and good luck!
+Thank you and looking forward to seeing your great work!
 
 
-## Questions:
 
-A) Describe the strategy used to consume the API endpoints and the data management.
-
-B) Explain which library was used for the routing and why. Would you use the same for a consumer facing app targeting thousands of users? Why?
-
-C) Have you used any strategy to optimize the performance of the list generated for the first feature?
-
-D) Would you like to add any further comments or observations?
