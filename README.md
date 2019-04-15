@@ -1,94 +1,64 @@
-# Code Challenge
+# Santiago Garzon Code Challenge
+Hi, I really enjoyed developing this code test.
+I usually work with Angular, so this was hard at first, but I learned a lot on the way.
 
-## Instructions:
+I know I could've applied better approaches but I run out of time.
 
-Please clone the repository, complete the exercise, and submit a PR for us to review! If you have any questions, you can reach out directly here or leave comments on your pull request which we will respond to. Remember, all instructions for running the application (including installing relevant libraries, etc.) should be included in the README. 
+Looking forward to hearing your review.
 
-
-## Delivery Steps: 
-
-1. Create a branch from `master` named `base` and push all the third-party code needed (Libraries, Frameworks, etc.).
-2. Create a branch from `base` named `code-test` and push your own code (Remember to update the Readme file providing any instructions on how to run the project if needed).
-3. Create a Pull Request from `code-test` to `base` for us to review.
+## To run the project.
+'npm install'
 
 
 ## Please answer the following questions once you finish codding:
 
-A) Describe the strategy used to consume the API endpoints and the data management.
+**A) Describe the strategy used to consume the API endpoints and the data management.**
 
-B) Explain which library was used for the routing and why. Would you use the same for a consumer facing app targeting thousands of users? Why?
+I created a class inside service folder to handle the http calls, using Axios library. A promise is return and it's handled when the hook 'componentDidMount' is called. This logic is used for both Screens (cocktailMainPage and cocktailDetail).
+Error component should be create to catch and render error response states.
 
-C) Have you used any strategy to optimize the performance of the list generated for the first feature?
+The data.drinks is saved inside the component state in order to retrieve a FlatList or the detailComponent. The state that feed the FlatList will change when the filter is activated, making the list dynamically.
 
-D) Would you like to add any further comments or observations?
+A spinner was added to make the ux friendly until we receive the response. 
 
+**B) Explain which library was used for the routing and why. Would you use the same for a consumer facing app targeting thousands of users? Why?**
 
-## Overview:
+I used react-navigation because I found it easy to use and fast to install but still powerful.
 
-Implement a simple mobile cocktails catalogue (master / detail). The catalogue consists of a table view list of cocktails with their name, toppings and photo. Once the user taps on a specific row it will push a new screen with that drink’s details: Name, Photo, Ingredients and Preparation.
+If I'd to develop a consumer facing app I'd use react-native-navigation because it's a native implementation and I could avoid adding complex computations in js.
 
+This will conclude in a better performance and user experience.
 
-## Features:
+**C) Have you used any strategy to optimize the performance of the list generated for the first feature?**
 
-**1. Cocktails list:**
+I used a FlatList, which has a great performance. Also I customized some properties to optimize it, like:
 
-For each row of the list it will display the Cocktail name and photo (See wireframe 1).
-The API endpoint that should be consumed for this purpose is: 
+-removeClipperSubviews, to unmount components that are off of the window.
 
-http://www.thecocktaildb.com/api/json/v1/1/filter.php?g=Cocktail_glass
+-initialNumToRender: 5, this means that the device screen will be covered within the first 5 cards are rendered.
 
-This returns a JSON list of cocktails, and the information needed in order to populate each row of the list.
-
-```
-{
- 	strDrink,           → Cocktail name
-     	strDrinkThumb,  → Photo URL
-      	idDrink       → Cocktail ID
-}
-```
-
-Wireframe 1:
-
-![screen shot 2018-02-02 at 12 53 57](https://user-images.githubusercontent.com/263229/35742087-40b1ce26-0818-11e8-91d7-5c2ea0d4a6aa.png)
+-windowSize: 15, maybe the list will be blank if we scroll to fast. but we are going to consume less memory.
 
 
+**D) Would you like to add any further comments or observations?**
+
+If I'd had more time, I'd have tried to use:
 
 
-**2. Cocktail detail:**
+-es-lint for better developing experience.
 
-Once the user taps on a row from the list mentioned in the previous feature it will push a new screen with the selected cocktail’s details, where it will show it’s name, photo, ingredients and instructions (See wireframe 2)
+-SearchBar inside the header.
 
-The endpoint to be used for this is the following:
- 
-http://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${idDrink} → Cocktail ID
-I.g.: http://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=16108
+-Entities to define the Cocktail and CocktailDetail objects.
 
-The endpoint returns a JSON with the cocktails info, the needed properties are:
-```
-{
-	strInstructions,  → instructions
-	strDrink,         → cocktail name
-	strDrinkThumb,    → photo URL
-	strIngredient1,   → ingredient 1
-	...
-	strIngredientN    → ingredient N
-}
-```
+-Constants files.
 
-Wireframe 2
+-Stateless and PureComponents
 
-![screen shot 2018-02-02 at 12 53 37](https://user-images.githubusercontent.com/263229/35742155-63205b1c-0818-11e8-8b4b-608a46eaa718.png)
-	
-  
-  
-  
-**3. Bonus Points: (Optional)**
+-Maybe a boilerplate to win some time.
 
-Implement a filter by name functionality on the first screen that automatically filters the results while typing, only showing the rows that satisfy the criteria entered by the user.
+-Styles files.
 
+-Redux to handle states.
 
-
-Thank you and looking forward to seeing your great work!
-
-
-
+-Progressive commits to better work tracking.
