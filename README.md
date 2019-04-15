@@ -16,7 +16,7 @@ Looking forward to hearing your review.
 
 ## Please answer the following questions once you finish codding:
 
-A) Describe the strategy used to consume the API endpoints and the data management.<br />
+**A) Describe the strategy used to consume the API endpoints and the data management.**
 
 I created a class inside service folder to handle the http calls, using Axios library. A promise is return and it's handled when the hook 'componentDidMount' is called. This logic is used for both Screens (cocktailMainPage and cocktailDetail).
 Error component should be create to catch and render error response states.
@@ -25,7 +25,7 @@ The data.drinks is saved inside the component state in order to retrieve a FlatL
 
 A spinner was added to make the ux friendly until we receive the response. 
 
-B) Explain which library was used for the routing and why. Would you use the same for a consumer facing app targeting thousands of users? Why?
+**B) Explain which library was used for the routing and why. Would you use the same for a consumer facing app targeting thousands of users? Why?**
 
 I used react-navigation because I found it easy to use and fast to install but still powerful.
 
@@ -33,7 +33,7 @@ If I'd to develop a consumer facing app I'd use react-native-navigation because 
 
 This will conclude in a better performance and user experience.
 
-C) Have you used any strategy to optimize the performance of the list generated for the first feature?
+**C) Have you used any strategy to optimize the performance of the list generated for the first feature?**
 
 I used a FlatList, which has a great performance. Also I customized some properties to optimize it, like:
 
@@ -44,7 +44,7 @@ I used a FlatList, which has a great performance. Also I customized some propert
 -windowSize: 15, maybe the list will be blank if we scroll to fast. but we are going to consume less memory.
 
 
-D) Would you like to add any further comments or observations?
+**D) Would you like to add any further comments or observations?**
 
 If I'd had more time, I'd have tried to use:
 
