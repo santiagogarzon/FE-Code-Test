@@ -9,10 +9,6 @@ Looking forward to hearing your review.
 ## To run the project.
 'npm install'
 
-'react-native link react-native-vector-icons' 
-
-'react-native link react-native-gesture-handler'
-
 
 ## Please answer the following questions once you finish codding:
 

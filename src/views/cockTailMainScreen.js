@@ -1,16 +1,13 @@
+import React from "react";
+import { View, StyleSheet, Image, TouchableOpacity, FlatList, ActivityIndicator } from "react-native";
+import { Input } from "react-native-elements";
 import _ from "lodash";
+
 import Cocktail  from "../components/cocktail";
 import CocktailService from "../services/cocktailService";
-import { Input } from "react-native-elements";
-import React from "react";
 import { SEARCH_ICON } from "../assets/icons/index";
-import { View, StyleSheet, Image, TouchableOpacity, FlatList, ActivityIndicator } from "react-native";
 
-class CockTailMainPage extends React.Component {
-    static searchIconStyle = {
-        marginRight: 10
-    };
-
+class CockTailMainScreen extends React.Component {
     static navigationOptions = {
         title: 'Random drinks 0.1',
         headerRight: (
@@ -37,7 +34,7 @@ class CockTailMainPage extends React.Component {
         query: ''
     };
 
-    componentWillMount() {
+    componentDidMount() {
         CocktailService.getCocktails()
             .then(res => {
                 this.setState({
@@ -124,4 +121,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default CockTailMainPage;
+export default CockTailMainScreen;

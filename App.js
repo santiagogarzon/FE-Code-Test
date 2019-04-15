@@ -1,11 +1,11 @@
 
 import { createStackNavigator, createAppContainer } from "react-navigation";
-import CockTailMainPage from "./src/views/cockTailMainPage";
+import CockTailMainScreen from "./src/views/cockTailMainScreen";
 import CocktailDetail from "./src/views/cocktailDetail";
 
 const AppNavigator = createStackNavigator(
     {
-        Home: CockTailMainPage,
+        Home: CockTailMainScreen,
         Details: CocktailDetail
     },
     { 

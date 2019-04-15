@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 
-class Cocktail extends React.Component {
+class Cocktail extends React.PureComponent {
     render() {
         const item = this.props.cocktail;
 

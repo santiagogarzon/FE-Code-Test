@@ -1,7 +1,6 @@
 import axios from 'axios';
-import _ from 'lodash';
 
-export default class AppService{
+export default class CocktailService{
     static getCocktails() {
         return axios.get('http://www.thecocktaildb.com/api/json/v1/1/filter.php?g=Cocktail_glass')
         .then(res => {

@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, ActivityIndicator } from "react-native";
+
 import CocktailService from "../services/cocktailService";
 
 class CockTailDetail extends React.Component {
@@ -25,8 +26,8 @@ class CockTailDetail extends React.Component {
         isLoading: true 
     };
   
-    componentWillMount() {        
-        const itemId = this.props.navigation.getParam('drinkId', 16108);
+    componentDidMount() {        
+        const itemId = this.props.navigation.getParam('drinkId');
 
         CocktailService.getCocktail(itemId)
             .then(res => {
